@@ -1,5 +1,7 @@
 import { View, TextInput, Button, StyleSheet } from 'react-native';
 import Result from './Result';
+import FormClassificação from './FormClassificação';
+import CalculoPesoIDeal from './CalculoPesoIDeal';
 import { useState } from 'react';
 
 const FormIMC = () => {
@@ -32,9 +34,11 @@ const FormIMC = () => {
             />
             <Button title="Calcular IMC" onPress={calcularIMC}/>
             { imc && <Result imc={imc} />}
+            <FormClassificação/>
+            <CalculoPesoIDeal/>
         </View>
     );
-;}
+};
 
 const styles = StyleSheet.create({
     formContainer: {
@@ -48,7 +52,7 @@ const styles = StyleSheet.create({
         borderWidth: 1,
         marginBottom: 12,
         paddingHorizontal: 8,
-        borderRadius: 5;
+        borderRadius: 5,
         },
 });
 
